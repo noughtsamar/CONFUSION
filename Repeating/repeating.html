@@ -31,6 +31,14 @@ button
                 font-size: 25px;
                 line-height: 100px;
             }
+            .input2 {
+    width: 200px;
+    margin: 60px auto 10px auto;
+    height: 100px;
+    font-size: 20px;
+    background-color: bisque;
+    text-align: center;
+}
         </style>
     </head>
     <body>
@@ -63,6 +71,12 @@ button
                 if (!num) return;
                 PlayNumber();
                 setTimeout(function() { playAudio(num - 1); }, 1500);
+                setTimeout(function() { 
+                var ele=document.getElementsByClassName("text-input"); 
+                for(i in ele)
+                {
+                    ele[i].disabled=false;
+                }}, 7500);
             }
             function getnum() {
     var input = document.getElementsByName('array[]');
@@ -98,16 +112,22 @@ button
                 <form class="input" action="index.html" method="post">
                     
                     <div class="input1">
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
                     </div>
                     <br>
                     <button type="button" name="button" onclick="getnum()" class="input2" style="width: 150px;">Submit</button>
                 </form>
             </div>
         </div>
+        <div style="text-align: center;">
+            <button type="button" name="button" class="input2">
+                <a href="/Kodikon/main/stroop/index.html">Next</a>
+            </button>
+        </div>
+    
     </body>
 </html>
