@@ -11,18 +11,6 @@
             font-size:34px; font-weight:500; 
             margin-left: 100px;
   }
-  .content {
-  height: 200px;
-  width: 400px;
-  /* background-color: var(--buttonhover); */
-  font-size: 150%;
-  margin-left: 100px;
-  margin-top: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(81, 49, 49);
-  padding: 10px;
-  text-align:center;
-}
 .text-input {
     height:100px;
     width:100px;
@@ -33,6 +21,16 @@
     border-radius: 10%;
     margin: 0 10px;
 }
+button
+            {
+                height:100px;
+                width:400px;
+                background-color: #FFDBA4;
+                margin: 50px 20px;
+                text-align:center;
+                font-size: 25px;
+                line-height: 100px;
+            }
         </style>
     </head>
     <body>
@@ -66,19 +64,50 @@
                 PlayNumber();
                 setTimeout(function() { playAudio(num - 1); }, 1500);
             }
+            function getnum() {
+    var input = document.getElementsByName('array[]');
+    const arr=[];
+    for (var i = 0; i < input.length; i++) {
+        var a = input[i].value;
+        arr[i] = a;
+    }
+
+    let q=0;
+    for (let p = 0; p < 6; p++) {
+        if (arr[p]!=num[p]) {
+            q++;
+            break;
+        }
+        
+    }
+        
+    if (q==0) {
+        console.log("ok")
+    }else{
+        console.log("not ok")
+    }
+}
         </script> 
-        <h1>Enter the numbers in the said sequence</h1>
-        <h3 class="content">(Numbers can be heard only once)</h3>      
+        <h1 style="text-align: center;">Enter the numbers in the said sequence</h1>
+        <h3 style="text-align: center;">(Numbers can be heard only once)</h3>      
         <div style="text-align: center;">
             <button onclick="return playAudio(5);">Click to here the numbers</button>
             <br>
             <br>
-            <form>
-                <input type="text" pattern="[0-9]{5}">
-                <br>
-                <br>
-                <input type="submit">
-            </form>
+            <div class="text-container">
+                <form class="input" action="index.html" method="post">
+                    
+                    <div class="input1">
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                    </div>
+                    <br>
+                    <button type="button" name="button" onclick="getnum()" class="input2" style="width: 150px;">Submit</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
