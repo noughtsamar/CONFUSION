@@ -1,6 +1,39 @@
 <html>
     <head>
-        <title></title>
+        <title></title><style>
+            body{
+                background-color:#FFB3B3 ;
+                margin:0px;
+                padding:0px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            h1 {
+            font-size:34px; font-weight:500; 
+            margin-left: 100px;
+  }
+  .content {
+  height: 200px;
+  width: 400px;
+  /* background-color: var(--buttonhover); */
+  font-size: 150%;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(81, 49, 49);
+  padding: 10px;
+  text-align:center;
+}
+.text-input {
+    height:100px;
+    width:100px;
+    background-color: #f5e6da;
+    text-align:center;
+    font-size: 50px;
+    line-height: 100px;
+    border-radius: 10%;
+    margin: 0 10px;
+}
+        </style>
     </head>
     <body>
         <script type="text/javascript">
@@ -34,8 +67,8 @@
                 setTimeout(function() { playAudio(num - 1); }, 1500);
             }
         </script> 
-        <h1 style="text-align: center;">Enter the numbers in the said sequence</h1>
-        <h3 style="text-align: center;">(Numbers can be heard only once)</h3>      
+        <h1>Enter the numbers in the said sequence</h1>
+        <h3 class="content">(Numbers can be heard only once)</h3>      
         <div style="text-align: center;">
             <button onclick="return playAudio(5);">Click to here the numbers</button>
             <br>
