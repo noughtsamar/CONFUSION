@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html><head>
     <title>CONNECTING GAME</title>
+    
+
     <style>
 
 h1,h2 {
@@ -29,20 +31,30 @@ img{
 </style>
 </head>
     <body style="background-color:aquamarine;margin:20px">
+        
 <h1>Choose the <i>PICTURE </i>that represents the given <i> NUMERIC VALUE </i></h1>
-<h1>6</h1>
+<h2><script>
+    let numbers=[3,4,7,6];
+    function getrandomno(arr){
+        const index=Math.floor(Math.random() * arr.length);
+        const item=arr[index];
+        return item;
+    }
+    const res=getrandomno(numbers);
+    document.write(res)
+</script></h2>
 <div class="container">
-<img src="C:\Users\cheta\Desktop\Connectingimg\ma1.jpg" alt="Option1">
+<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma1.jpg" alt="Option1">
 <figcaption><h2>(A)</h2></figcaption>
-<img src="C:\Users\cheta\Desktop\Connectingimg\ma2.jpg" alt="Option2">
+<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma2.jpg" alt="Option2">
 <figcaption><h2>(B)</h2></figcaption>
 
 <br>
 
-<img src="C:\Users\cheta\Desktop\Connectingimg\ma3.jpg" alt="Option3">
+<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma3.jpg" alt="Option3">
 <figcaption><h2>(C)</h2></figcaption>
 
-<img src="C:\Users\cheta\Desktop\Connectingimg\ma4.jpg" alt="Option4">
+<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma4.jpg" alt="Option4">
 <figcaption><h2>(D)</h2></figcaption>
 </div>
 <br>
