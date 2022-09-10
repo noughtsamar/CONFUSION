@@ -1,8 +1,20 @@
 <html>
     <head>
         <title>IVA-II</title>
+        <style>
+            button
+            {
+                height:100px;
+                width:150px;
+                background-color: #FFDBA4;
+                margin: 50px 20px;
+                text-align:center;
+                font-size: 50px;
+                line-height: 100px;
+            }
+        </style>
     </head>
-    <body>
+    <body style="background-color: #FFB3B3;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
         <script type="text/javascript">
             const ran=[];
             const audio=[];
@@ -68,15 +80,17 @@
             }
         </script>
 
-    <h2 style="text-align: center;"> Click Yes button when you hear or read <span style="color: red;">1</span> else click No</h2>
+        <h2 style="text-align: center;"> Click Yes button when you hear or read 1 else click No</h2>
     
-    <h3 style="text-align: center;"> (Numbers can be heard only once)</h3>
+        <h3 style="text-align: center;"> (Numbers can be heard only once)</h3>
 
-    <div id="number"></div>
-    <button onclick="clicked(5);">Start</button>
-    <br>
-    <button onclick="Yes();">Yes</button>
-    <button onclick="No();">No</button>
+        <h1 id="number" style="color: black;text-align: center;"></h1>
+        <div style="text-align: center;">
+        <button onclick="clicked(5);">Start</button>
+        <br>
+        <button onclick="Yes();">Yes</button>
+        <button onclick="No();">No</button>
+        </div>
     </body>
 
 </html>
