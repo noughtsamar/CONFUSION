@@ -29,7 +29,12 @@ export function createFile () {
     mismatchedsum = mismatchedsum/numberOfWords;
     informationArray.push(`${matchedsum}   ${mismatchedsum}`);
 
+    /*
     domElements.buttons.download.href = makeTextFile(
         `Number of Words: ${numberOfWords*2}\nIncorrect Answers: ${incorrectCounter}\n Matched Mismatched\n${informationArray.join('\n')}`
     );
+    */
+    domElements.buttons.download.href = makeTextFile(
+        `${incorrectCounter/(numberOfWords*2)}`)
+    
 }
