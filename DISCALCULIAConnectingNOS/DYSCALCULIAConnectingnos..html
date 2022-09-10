@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html><head>
     <title>CONNECTING GAME</title>
-    
 
     <style>
 
 h1,h2 {
 	margin-bottom: 10px;
-    color:blueviolet;
+    font-family:"segou-ui";
     
+    
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin: 0px;
+  font-family: "segoe ui";
+  background-color: #FFB3B3;
 }
 
 img{
@@ -26,14 +34,35 @@ img{
 .container{
     display:flex;
 }
+.btn-2 {
+    background: var(--buttonhover);
+    background: linear-gradient(0deg, rgb(254, 198, 156) 0%, rgb(254, 198, 156) 100%);
+    border:4px solid black;
+    text-align:center;
+    align-items:center;
+    height:70px;
+    width:130px;
+    
+    
+  }
+  .btn-2:before {
+    height: 20px;
+    width: 20px;
+  }
+  .btn-2:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(92, 85, 85, 0.4);
+  }
 
 
 </style>
 </head>
-    <body style="background-color:aquamarine;margin:20px">
+    <body>
         
 <h1>Choose the <i>PICTURE </i>that represents the given <i> NUMERIC VALUE </i></h1>
-<h2><script>
+<h1><center><script>
     let numbers=[3,4,7,6];
     function getrandomno(arr){
         const index=Math.floor(Math.random() * arr.length);
@@ -42,26 +71,22 @@ img{
     }
     const res=getrandomno(numbers);
     document.write(res)
-</script></h2>
+</script></center></h1>
 <div class="container">
 <img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma1.jpg" alt="Option1">
-<figcaption><h2>(A)</h2></figcaption>
 <img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma2.jpg" alt="Option2">
-<figcaption><h2>(B)</h2></figcaption>
-
-<br>
-
 <img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma3.jpg" alt="Option3">
-<figcaption><h2>(C)</h2></figcaption>
-
-<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma4.jpg" alt="Option4">
-<figcaption><h2>(D)</h2></figcaption>
+<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma4.jpg" alt="Option4"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
+<h1><p>(A)  &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13; (B)    &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;         (C)     &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;  
+    &emsp13;&emsp13;&emsp13;    (D)         </p></h1>
+
 <br>
 <br>
+<center>
 <form><input type="text"></form><br>
 
-<input type="submit" button style="background-color:#157A6E;height:70px;width:150px;color:yellow">
-
+<input type="submit" class="btn-2" >
+</center>
     </body>
 </html>
