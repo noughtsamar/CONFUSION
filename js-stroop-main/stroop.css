@@ -2,13 +2,13 @@
     --text-field-color: rgba(255, 140, 0);
     --error-message-color: rgba(220, 20, 60, 0.75);
     --light-color: whitesmoke;
-    --dark-color: #bd7979;
-    --button-hover-color: #BFBFBF;
+    --dark-color: #FFB3B3;
+    --button-hover-color: #FFDBA4;
 }
 
 * {
     font-size: 25px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'segoe ui', sans-serif;
 }
 
 html, body {
@@ -98,6 +98,7 @@ input[type=number] {
 }
 
 #quantity-text {
+    background-color: #FFDBA4;
     font-size: 10px;
     text-align: center;
     padding: 5px;
@@ -135,7 +136,7 @@ button:hover {
 }
 
 #download-button:hover {
-    background-color: #BFBFBF;
+    background-color: #FFDBA4;
 }
 
 #download-button:link, #download-button:hover, #download-button:visited, #download-button:active {
