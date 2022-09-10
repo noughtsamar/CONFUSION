@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Details</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/form.css')}}"
+    />
+  </head>
+  <body>
+    <div class="content">
+        <h2 class="survey">Personal Details</h2>
+        <form class="form" onsubmit="myfun()">
+          <div class="form-control a">
+            <h4 class="t">Name</h4>
+            <br />
+            <input type="text" name="name" placeholder="Name" id="name" required />
+          </div>
+          <div class="form-control a">
+            <h4>Age</h4>
+            <br />
+            <input type="number" name="age" placeholder="Age" min="1" required />
+          </div>
+          <div class="form-control">
+            <h4>What is your gender?</h4>
+            <br />
+            <select name="gender" id="gender">
+              <option value="male">male</option>
+              <option value="female">female</option>
+              <option value="others">others</option>
+            </select>
+          </div>
+          <input type="submit" value="Send" class="btn btn-primary" />
+          <input type="reset" value="Reset" class="btn-reset btn-primary" />
+        </form>
+    </div>
+    <script src="{{url_for('static', filename='js/form.js')}}"></script>
+  </body>
+</html>
