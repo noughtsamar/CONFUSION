@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head>
+    <title>CONNECTING GAME</title>
+    
+
+    <style>
+
+h1,h2 {
+	margin-bottom: 10px;
+    color:blueviolet;
+    
+}
+
+img{
+    height:200px;
+    width:200px;
+    border:5px solid green;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    align-items:center;
+    text-align:center;
+
+}
+.container{
+    display:flex;
+}
+
+
+</style>
+</head>
+    <body style="background-color:aquamarine;margin:20px">
+        
+<h1>Choose the <i>PICTURE </i>that represents the given <i> NUMERIC VALUE </i></h1>
+<h2><script>
+    let numbers=[3,4,7,6];
+    function getrandomno(arr){
+        const index=Math.floor(Math.random() * arr.length);
+        const item=arr[index];
+        return item;
+    }
+    const res=getrandomno(numbers);
+    document.write(res)
+</script></h2>
+<div class="container">
+<figcaption><h2>(A)</h2></figcaption>
+<img src="ma1.jpg" alt="Option1">
+<figcaption><h2>(B)</h2></figcaption>
+<img src="ma2.jpg" alt="Option2">
+
+
+<br>
+<figcaption><h2>(C)</h2></figcaption>
+<img src="ma3.jpg" alt="Option3">
+<figcaption><h2>(D)</h2></figcaption>
+<img src="ma4.jpg" alt="Option4">
+
+</div>
+<br>
+<br>
+<form><input type="text"></form><br>
+
+<input type="submit" button style="background-color:#157A6E;height:70px;width:150px;color:yellow">
+    
+    </body>
+</html>

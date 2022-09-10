@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title></title><style>
+            body{
+                background-color:#FFB3B3 ;
+                margin:0px;
+                padding:0px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            h1 {
+            font-size:34px; font-weight:500; 
+            margin-left: 100px;
+  }
+  .content {
+  height: 200px;
+  width: 400px;
+  /* background-color: var(--buttonhover); */
+  font-size: 150%;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(81, 49, 49);
+  padding: 10px;
+  text-align:center;
+}
+.text-input {
+    height:100px;
+    width:100px;
+    background-color: #f5e6da;
+    text-align:center;
+    font-size: 50px;
+    line-height: 100px;
+    border-radius: 10%;
+    margin: 0 10px;
+}
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            const num=[];
+            for(var i=0;i<5;i++)
+            {
+                num[i]=Math.floor(Math.random()*9);
+            }
+            const audio=[];
+            audio[0]=new Audio("0.wav")
+            audio[1]=new Audio("1.wav")
+            audio[2]=new Audio("2.wav")
+            audio[3]=new Audio("3.wav")
+            audio[4]=new Audio("4.wav")
+            audio[5]=new Audio("5.wav")
+            audio[6]=new Audio("6.wav")
+            audio[7]=new Audio("7.wav")
+            audio[8]=new Audio("8.wav")
+            audio[9]=new Audio("9.wav")
+            audio[10]=new Audio("10.wav")
+            var k=0;
+            function PlayNumber()
+            {
+                audio[num[k]].play()
+                k++;
+            }
+            function playAudio(num) 
+            {
+                if (!num) return;
+                PlayNumber();
+                setTimeout(function() { playAudio(num - 1); }, 1500);
+            }
+        </script> 
+        <h1>Enter the numbers in the said sequence</h1>
+        <h3 class="content">(Numbers can be heard only once)</h3>      
+        <div style="text-align: center;">
+            <button onclick="return playAudio(5);">Click to here the numbers</button>
+            <br>
+            <br>
+            <form>
+                <input type="text" pattern="[0-9]{5}">
+                <br>
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
