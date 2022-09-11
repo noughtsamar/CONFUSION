@@ -71,6 +71,12 @@ button
                 if (!num) return;
                 PlayNumber();
                 setTimeout(function() { playAudio(num - 1); }, 1500);
+                setTimeout(function() { 
+                var ele=document.getElementsByClassName("text-input"); 
+                for(i in ele)
+                {
+                    ele[i].disabled=false;
+                }}, 7500);
             }
             function getnum() {
     var input = document.getElementsByName('array[]');
@@ -99,18 +105,18 @@ button
         <h1 style="text-align: center;">Enter the numbers in the said sequence</h1>
         <h3 style="text-align: center;">(Numbers can be heard only once)</h3>      
         <div style="text-align: center;">
-            <button onclick="return playAudio(5);">Click to hear the numbers</button>
+            <button onclick="return playAudio(5);">Click to here the numbers</button>
             <br>
             <br>
             <div class="text-container">
                 <form class="input" action="index.html" method="post">
                     
                     <div class="input1">
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
-                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
+                        <input class="text-input"type="text" name="array[]" value="" disabled/>
                     </div>
                     <br>
                     <button type="button" name="button" onclick="getnum()" class="input2" style="width: 150px;">Submit</button>
@@ -119,7 +125,7 @@ button
         </div>
         <div style="text-align: center;">
             <button type="button" name="button" class="input2">
-                <a href="../stroop/index.html">Next</a>
+                <a href="/Kodikon/main/stroop/index.html">Next</a>
             </button>
         </div>
     
