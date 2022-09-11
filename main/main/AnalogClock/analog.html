@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head><title>Analog Clock</title>
+<style>
+    #clockContainer {
+    position: relative;
+    margin: auto;
+    height:380px;
+    /*to make the height and width responsive*/
+    width: 340px;
+    background:url(clock.png) no-repeat;
+    /*setting our background image*/
+    background-size: 100%;
+}
+  
+#hour,
+#minute{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+  
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+  
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+}
+.input2 {
+    width: 200px;
+    margin: 60px auto 10px auto;
+    height: 100px;
+    font-size: 20px;
+    background-color: bisque;
+    text-align: center;
+}
+</style>
+<script>
+    setInterval(() => {
+    d = new Date(); //object of date()
+    hrs = d.getHours();
+    mins = d.getMinutes();
+    hrs_rotation = 30 * hrs + mins / 2; //converting current time
+    mins_rotation = 6 * mins;
+  
+    hour.style.transform = `rotate(${hrs_rotation}deg)`;
+    minute.style.transform = `rotate(${mins_rotation}deg)`;
+}, 1000)
+</script>
+</head>
+<body style="background-color:#FFB3B3">
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+    </div>
+    
+        <script>
+            const timeout=setTimeout(checkingtime,5000);
+            d=new Date()
+            H = d.getHours();
+            M = d.getMinutes();
+
+            function checkingtime(hr,min){
+            if (H<=12){
+                if(hr===H && (min<(M+3)) && (min>(M-3))){
+                    return 1;}
+                else{
+                    return 0;
+                }
+            }
+            else{
+                if ((hr===(H-12)) && (min<(M+3)) && (min>(M-3))){
+                    return 1;
+                }
+                else{
+                    return 0;
+                }
+            }
+               
+            }
+            function message(k){
+                if (k==1){
+                    alert("CORRECT");
+                }
+                else{
+                    alert("WRONG");
+                }
+            }
+            setTimeout(() => {
+            var hr = parseInt(prompt("Enter hour"));
+            var min = parseInt(prompt("Enter minutes "));
+
+
+            var k=checkingtime(hr,min);
+            message(k);
+            
+                
+            },10000);
+            
+            
+            
+            
+        </script>
+        <div style="text-align: center;">
+        <button type="button" name="button" class="input2">
+            <a href="../DISCALCULIAConnectingNOS/DYSCALCULIAConnectingnos..html">Next</a>
+        </button>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

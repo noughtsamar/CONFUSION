@@ -1,0 +1,98 @@
+
+<html>
+  <head>
+    <title>Stroop</title>
+    <style>
+      button {
+        height: 100px;
+        width: 150px;
+        background-color: #ffdba4;
+        margin: 50px 20px;
+        text-align: center;
+        font-size: 50px;
+        line-height: 100px;
+      }
+      .input2 {
+    width: 200px;
+    margin: 60px auto 10px auto;
+    height: 100px;
+    font-size: 20px;
+    background-color: bisque;
+    text-align: center;
+}
+    </style>
+  </head>
+  <body
+    style="
+      background-color: #ffb3b3;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    "
+  >
+    <script type="text/javascript">
+      const ran = [];
+      const colors = ["red","blue","green"];
+      var score = 0;
+      var toclick = 0;
+
+      function showColor(f) {
+        toclick=ran[5-f]
+        document.getElementById("number").innerHTML = colors[Math.floor(Math.random()*3)];
+        document.getElementById("number").style.color=colors[ran[5-f]]
+      }
+      function clicked(f) {
+        for (var i = 0; i < 5; i++) {
+          var n = Math.floor(Math.random() * 3);
+          while (i > 0 && ran[i - 1] === n) {
+            n = Math.floor(Math.random() * 3);
+          }
+          ran[i] = n;
+        }
+        console.log(ran);
+        start(f);
+        setTimeout(function () {
+          console.log(score);
+        }, 25000);
+      }
+      function start(f) {
+        if (!f) return;
+        showColor(f);
+        setTimeout(function () {
+          start(f - 1);
+        }, 5000);
+      }
+      function Red() {
+        if (toclick === 0) score = score + 1;
+        else score = score - 1;
+      }
+      function Blue() {
+        if (toclick === 1) score = score + 1;
+        else score = score - 1;
+      }
+      function Green() {
+        if (toclick === 2) score = score + 1;
+        else score = score - 1;
+      }
+    </script>
+
+    <h2 style="text-align: center">
+      Click on the Color of the Text
+    </h2>
+
+    <h1 id="number" style="color: black; text-align: center"></h1>
+    <div style="text-align: center">
+      <button onclick="clicked(5);">Start</button>
+      <br />
+      <button onclick="Red();">Red</button>
+      <button onclick="Blue();">Blue</button>
+      <button onclick="Green();">Green</button>
+    </div>
+    <br>
+    <div style="text-align: center;">
+    <button type="button" name="button" class="input2">
+      <a href="/Kodikon/main/AnalogClock/analog.html">Next</a>
+    </button>
+  </div>
+  </body>
+</html>
+

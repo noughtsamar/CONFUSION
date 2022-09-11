@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Emilys+Candy&family=Oswald&family=Source+Sans+Pro&display=swap');
+body {
+    background-color: #FFB3B3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+}
+.input1 {
+    display: flex;
+    margin-bottom: 40px;
+}
+.input2 {
+    width: 200px;
+    margin: 60px auto 10px auto;
+    height: 50px;
+    background-color: bisque;
+}
+.input {
+    display: flex;
+    flex-direction: column;    
+}
+
+.text-input {
+    height:100px;
+    width:100px;
+    background-color: #f5e6da;
+    text-align:center;
+    font-size: 50px;
+    line-height: 100px;
+    border-radius: 10%;
+    margin: 0 10px;
+}
+.btn {
+    height:100px;
+    width:100px;
+    background-color: #FFDBA4;
+    margin: 50px 20px;
+    text-align:center;
+    font-size: 50px;
+    line-height: 100px;
+
+}
+
+h1 {
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+/* .input2:hover{
+    background-color: #f4c071;
+} */
+
+
+
+.button {
+  border: none;
+  padding: 0;
+  width: 200px;
+  margin: 40px 50% 5px 50%;
+  height: 50px;
+  transform: translate(-50%,-50%);
+  background: #f4c071;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.top {
+  display: block;
+  padding: 15px 45px;
+  border-radius: 15px;
+  font-size: 1rem;
+  background: #FFDBA4;
+  color: rgb(1, 1, 1);
+  transform: translateY(-8px);
+}
+
+.button:active .top {
+  transform: translateY(-2px);
+}

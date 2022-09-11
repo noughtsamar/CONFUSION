@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title></title><style>
+            body{
+                background-color:#FFB3B3 ;
+                margin:0px;
+                padding:0px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            h1 {
+            font-size:34px; font-weight:500; 
+            margin-left: 100px;
+  }
+.text-input {
+    height:100px;
+    width:100px;
+    background-color: #f5e6da;
+    text-align:center;
+    font-size: 50px;
+    line-height: 100px;
+    border-radius: 10%;
+    margin: 0 10px;
+}
+button
+            {
+                height:100px;
+                width:400px;
+                background-color: #FFDBA4;
+                margin: 50px 20px;
+                text-align:center;
+                font-size: 25px;
+                line-height: 100px;
+            }
+            .input2 {
+    width: 200px;
+    margin: 60px auto 10px auto;
+    height: 100px;
+    font-size: 20px;
+    background-color: bisque;
+    text-align: center;
+}
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            const num=[];
+            for(var i=0;i<5;i++)
+            {
+                num[i]=Math.floor(Math.random()*9);
+            }
+            const audio=[];
+            audio[0]=new Audio("0.wav")
+            audio[1]=new Audio("1.wav")
+            audio[2]=new Audio("2.wav")
+            audio[3]=new Audio("3.wav")
+            audio[4]=new Audio("4.wav")
+            audio[5]=new Audio("5.wav")
+            audio[6]=new Audio("6.wav")
+            audio[7]=new Audio("7.wav")
+            audio[8]=new Audio("8.wav")
+            audio[9]=new Audio("9.wav")
+            audio[10]=new Audio("10.wav")
+            var k=0;
+            function PlayNumber()
+            {
+                audio[num[k]].play()
+                k++;
+            }
+            function playAudio(num) 
+            {
+                if (!num) return;
+                PlayNumber();
+                setTimeout(function() { playAudio(num - 1); }, 1500);
+            }
+            function getnum() {
+    var input = document.getElementsByName('array[]');
+    const arr=[];
+    for (var i = 0; i < input.length; i++) {
+        var a = input[i].value;
+        arr[i] = a;
+    }
+
+    let q=0;
+    for (let p = 0; p < 6; p++) {
+        if (arr[p]!=num[p]) {
+            q++;
+            break;
+        }
+        
+    }
+        
+    if (q==0) {
+        console.log("ok")
+    }else{
+        console.log("not ok")
+    }
+}
+        </script> 
+        <h1 style="text-align: center;">Enter the numbers in the said sequence</h1>
+        <h3 style="text-align: center;">(Numbers can be heard only once)</h3>      
+        <div style="text-align: center;">
+            <button onclick="return playAudio(5);">Click to hear the numbers</button>
+            <br>
+            <br>
+            <div class="text-container">
+                <form class="input" action="index.html" method="post">
+                    
+                    <div class="input1">
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                        <input class="text-input"type="text" name="array[]" value="" />
+                    </div>
+                    <br>
+                    <button type="button" name="button" onclick="getnum()" class="input2" style="width: 150px;">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button type="button" name="button" class="input2">
+                <a href="../stroop/index.html">Next</a>
+            </button>
+        </div>
+    
+    </body>
+</html>
