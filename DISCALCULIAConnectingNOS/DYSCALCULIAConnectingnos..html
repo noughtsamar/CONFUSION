@@ -70,23 +70,41 @@ img{
         return item;
     }
     const res=getrandomno(numbers);
-    document.write(res)
-</script></center></h1>
-<div class="container">
-<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma1.jpg" alt="Option1">
-<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma2.jpg" alt="Option2">
-<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma3.jpg" alt="Option3">
-<img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma4.jpg" alt="Option4"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
-<h1><p>(A)  &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13; (B)    &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;         (C)     &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;  
-    &emsp13;&emsp13;&emsp13;    (D)         </p></h1>
+    document.write(res); 
+     var n;
+     function clicked(v)
+     {
+        n=v;
+        if (res===n){
+            alert("CORRECT");
+     }
+     else{
+        alert("INCORRECT");
+     }
 
-<br>
-<br>
+} 
+    
+
+</script>
+
+</center></h1>
+
+<button onclick="return clicked(3)" id="btn"><img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma1.jpg" alt="Option1"></button>
+
+<button onclick="return clicked(4)" id="btn"><img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma2.jpg" alt="Option2"></button>
+
+<button onclick="return clicked(7)" id="btn"><img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma3.jpg" alt="Option3"></button>
+
+<button onclick="return clicked(6)" id="btn"><img src="C:\Users\cheta\Desktop\DISCALCULIAConnectingNOS\ma4.jpg" alt="Option4"></button>
+<br><br><br>
 <center>
-<form><input type="text"></form><br>
+<br>
 
-<input type="submit" class="btn-2" >
+
+<br>
+
 </center>
+
     </body>
+
 </html>
